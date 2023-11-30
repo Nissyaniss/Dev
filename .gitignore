@@ -1,6 +1,7 @@
 .vscode/
 *.o
-libftTester/
+./libftTester/
 *.a
 *.out
 *.gch
+C/42/libft/libftTester
