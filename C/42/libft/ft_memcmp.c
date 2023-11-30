@@ -6,13 +6,13 @@
 /*   By: Nissya <kirito042004@gmail.com>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/14 13:47:49 by Nissya            #+#    #+#             */
-/*   Updated: 2023/11/17 09:10:03 by Nissya           ###   ########.fr       */
+/*   Updated: 2023/11/30 10:44:23 by Nissya           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_memcmp(void *s1, void *s2, int n)
+int	ft_memcmp(void *s1, void *s2, size_t n)
 {
 	int				i;
 	unsigned char	*str1_ptr;

@@ -6,11 +6,13 @@
 /*   By: Nissya <kirito042004@gmail.com>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/14 13:38:50 by Nissya            #+#    #+#             */
-/*   Updated: 2023/11/14 13:46:08 by Nissya           ###   ########.fr       */
+/*   Updated: 2023/11/30 10:42:51 by Nissya           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	*ft_memchr(void *s, int c, int n)
+#include "libft.h"
+
+void	*ft_memchr(void *s, int c, size_t n)
 {
 	int				i;
 	unsigned char	*str_ptr;

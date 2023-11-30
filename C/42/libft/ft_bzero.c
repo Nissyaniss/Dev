@@ -6,11 +6,13 @@
 /*   By: Nissya <kirito042004@gmail.com>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 18:41:58 by Nissya            #+#    #+#             */
-/*   Updated: 2023/11/14 11:08:32 by Nissya           ###   ########.fr       */
+/*   Updated: 2023/11/30 10:33:14 by Nissya           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_bzero(void *dest, int n)
+#include "libft.h"
+
+void	ft_bzero(void *dest, size_t n)
 {
 	int				i;
 	unsigned char	*ptr;

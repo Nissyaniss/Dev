@@ -1,4 +1,4 @@
-CFLAGS = -Wall -Werror -Wextra
+CFLAGS = -Wall -Werror -Wextra -g
 CLANG = clang
 SRC = ./ft_bzero.c\
 	  ./ft_isalnum.c\
@@ -15,6 +15,7 @@ SRC = ./ft_bzero.c\
 	  ./ft_strlcat.c\
 	  ./ft_strlcpy.c\
 	  ./ft_strlen.c\
+	  ./ft_strncmp.c\
 	  ./ft_strrchr.c\
 	  ./ft_tolower.c\
 	  ./ft_toupper.c\
