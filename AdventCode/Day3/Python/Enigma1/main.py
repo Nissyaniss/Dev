@@ -25,32 +25,32 @@ def main() -> None:
 					nbLen += 1
 					y += 1
 				y -= nbLen
-				while line[y].isdigit():
-					if i - 1 >= 0 and y - 1 >= 0 and y + nbLen + 1 < len(fileCopy[i]) and i + 1 < len(fileCopy):
+				if line[y].isdigit():
+					if i - 1 >= 0 and y + nbLen < len(fileCopy[i]) and i + 1 < len(fileCopy):
 						for j in range(-1, nbLen + 1):
-							if fileCopy[i - 1][y + j] != '.' and not fileCopy[i - 1][y + j].isdigit() and fileCopy[i - 1][y + j] != '\n':
+							if fileCopy[i - 1][max(0, y + j)] != '.' and not fileCopy[i - 1][max(0, y + j)].isdigit() and fileCopy[i - 1][max(0, y + j)] != '\n':
 								isPartNb = True
 						for j in range(-1, nbLen + 1):
-							if fileCopy[i][y + j] != '.' and not fileCopy[i][y + j].isdigit() and fileCopy[i][y + j] != '\n':
+							if fileCopy[i][max(0, y + j)] != '.' and not fileCopy[i][max(0, y + j)].isdigit() and fileCopy[i][max(0, y + j)] != '\n':
 								isPartNb = True
 						for j in range(-1, nbLen + 1):
-							if fileCopy[i + 1][y + j] != '.' and not fileCopy[i + 1][y + j].isdigit() and fileCopy[i + 1][y + j] != '\n':
+							if fileCopy[i + 1][max(0, y + j)] != '.' and not fileCopy[i + 1][max(0, y + j)].isdigit() and fileCopy[i + 1][max(0, y + j)] != '\n':
 								isPartNb = True
-					elif y - 1 >= 0 and y + nbLen + 1 < len(fileCopy[i]) and i + 1 < len(fileCopy):
+					elif y + nbLen < len(fileCopy[i]) and i + 1 < len(fileCopy):
 						for j in range(-1, nbLen + 1):
-							if fileCopy[i][y + j] != '.' and not fileCopy[i][y + j].isdigit() and fileCopy[i][y + j] != '\n':
-								isPartNb = True
-						for j in range(-1, nbLen + 1):
-							if fileCopy[i + 1][y + j] != '.' and not fileCopy[i + 1][y + j].isdigit() and fileCopy[i + 1][y + j] != '\n':
-								isPartNb = True
-					elif i - 1 >= 0 and y - 1 >= 0 and y + nbLen + 1 < len(fileCopy[i]):
-						for j in range(-1, nbLen + 1):
-							if fileCopy[i - 1][y + j] != '.' and not fileCopy[i - 1][y + j].isdigit() and fileCopy[i - 1][y + j] != '\n':
+							if fileCopy[i][max(0, y + j)] != '.' and not fileCopy[i][max(0, y + j)].isdigit() and fileCopy[i][max(0, y + j)] != '\n':
 								isPartNb = True
 						for j in range(-1, nbLen + 1):
-							if fileCopy[i][y + j] != '.' and not fileCopy[i][y + j].isdigit() and fileCopy[i][y + j] != '\n':
+							if fileCopy[i + 1][max(0, y + j)] != '.' and not fileCopy[i + 1][max(0, y + j)].isdigit() and fileCopy[i + 1][max(0, y + j)] != '\n':
 								isPartNb = True
-					y += 1
+					elif i - 1 >= 0 and y + nbLen < len(fileCopy[i]):
+						for j in range(-1, nbLen + 1):
+							if fileCopy[i - 1][max(0, y + j)] != '.' and not fileCopy[i - 1][max(0, y + j)].isdigit() and fileCopy[i - 1][max(0, y + j)] != '\n':
+								isPartNb = True
+						for j in range(-1, nbLen + 1):
+							if fileCopy[i][max(0, y + j)] != '.' and not fileCopy[i][max(0, y + j)].isdigit() and fileCopy[i][max(0, y + j)] != '\n':
+								isPartNb = True
+				y += nbLen
 				if isPartNb:
 					print(nb)
 					result += nb
